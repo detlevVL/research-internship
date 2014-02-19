@@ -17,7 +17,7 @@ cluster(cluster==0) = [];
 
 % which images to show
 low = (opts.batch-1) * opts.numImages + 1; % if batch = 1 => start from image 1
-high = (opts.batch-1) * opts.numImages + opts.numImages; % if batch = 1 => end at image numImages
+high = opts.batch * opts.numImages; % if batch = 1 => end at image numImages
 
 if low > length(cluster),
    warning('There are only %i images in this cluster.', length(cluster));

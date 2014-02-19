@@ -60,7 +60,7 @@ axis image ;
 title(sprintf('Visual word %d ', vocid));
 
 subplot(1,2,2) ;
-imagesc(im0) ; hold on ;
+imshow(im0) ; hold on ;
 kp = keypoints([1 2 4], inds) ;
 kp(3,:) = kp(3,:) * 2 ;
 vl_plotframe(kp, 'linewidth', 2) ;
