@@ -48,21 +48,6 @@ for i = 1:ceil(length(imageIDs)/numImages)
             	continue;
             end
             
-            [drop, perm_] = sort(distances(inds), 'descend') ;
-            perm_ = vl_colsubset(perm_, 25*25, 'beginning') ;
-
-            for j = 1:numel(perm_)
-                u0 = keypoints(1,inds(perm_(j))) ;
-                v0 = keypoints(2,inds(perm_(j))) ;
-                s0 = keypoints(4,inds(perm_(j))) ;
-
-                delta = round(s0*2) ;
-                u1 = max(1,u0-delta) ;
-                u2 = min(size(im,2),u0+delta) ;
-                v1 = max(1,v0-delta) ;
-                v2 = min(size(im,1),v0+delta) ;
-            end
-            
             hold on ;
             kp = keypoints([1 2 4], inds) ;
             kp(3,:) = kp(3,:) * 2 ;

@@ -39,12 +39,12 @@ for i = 1:ceil(length(vocids)/opts.numWords)
     words = vocids(low:high);
     
     % PART 1: show the images with the words encircled
-    showMultipleWords(imageIDs, words, opts.numImages, names, vocabulary)
+    showMultipleWords(imageIDs, words, opts.numImages, names, vocabulary);
     
     % PART 2: show some examples of the words
-    % TODO
+    showExampleWords(imageIDs, words, names, vocabulary);
     
-    fprintf('Press any key to show to next word(s).\n') ;
+    fprintf('Press any key to show the next word(s).\n') ;
     pause; % wait for user input to show next word(s)
 end
 fprintf('All words have been shown.\n') ;
