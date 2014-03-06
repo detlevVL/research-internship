@@ -26,6 +26,8 @@ vocids = find(dimensions(clusterID,:) == 1);
 
 % remove zeros from end of imageIDs
 imageIDs(imageIDs==0) = [];
+% carticlus/weka starts from ID 0
+imageIDs = imageIDs + 1;
 
 fprintf('Cluster %i contains %i images, clustered on %i words\n', clusterID, length(imageIDs) ,length(vocids)) ;
 
