@@ -10,7 +10,6 @@ function showClusteringOutput(filename, numDims, clusterID, names, vocabulary, v
 % Use showClusteringOutput(..., 'numWords', K) to change the amount of 
 % words displayed at a time.
 % Default numImages = 16, numWords = 2
-% TODO: show some example words
 
 opts.numImages = 16;
 opts.numWords = 2;

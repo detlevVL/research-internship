@@ -1,4 +1,5 @@
 function histograms = computeBagOfWords(vocabulary, names)
+% for each image, run computeHistogramFromImage
 
 parfor i = 1:length(names)
   if exist(names{i}, 'file')
